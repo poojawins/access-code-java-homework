@@ -17,8 +17,8 @@ public class TextAdventure {
         health = 30;
 
         //game intro
-        System.out.println("Welcome to our game!");
-        System.out.println("Your health is at " + health + "out of 30.");
+        System.out.println("Welcome to my text adventure game!");
+        System.out.println("Your health is at " + health + " out of 30.");
         System.out.println("Each wrong move will cost you 10 health.");
 
         //story intro
@@ -75,6 +75,7 @@ public class TextAdventure {
 
     public static void wrongDecision() {
         health -= 10;
+        System.out.println("Wrong move!");
         hasDied(health);
     }
 
