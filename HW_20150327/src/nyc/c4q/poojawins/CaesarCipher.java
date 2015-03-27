@@ -28,10 +28,18 @@ public class CaesarCipher {
         return encoded.toString();
     }
 
-//    public static boolean codeBreaker(String one, String two) {
-//
-//
-//    }
+    public static boolean codeBreaker(String one, String two) {
+        for(int i = 1; 1 < 27; i++) {
+            String first = encode(one, i);
+            for (int j = 1; j < 27; j++) {
+                String second = encode(two, j);
+                if (first.equals(second)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -44,5 +52,7 @@ public class CaesarCipher {
         String decoded = CaesarCipher.decode(encoded, 25);
         System.out.println(decoded);
 
+        System.out.println(codeBreaker(encode("OMG", 7), encode("OMG", 17))); //true
+        System.out.println(codeBreaker(encode("OMG", 7), encode("PIG", 17))); //false
     }
 }
