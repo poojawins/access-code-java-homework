@@ -29,7 +29,7 @@ public class CaesarCipher {
     }
 
     public static boolean codeBreaker(String one, String two) {
-        for(int i = 1; 1 < 27; i++) {
+        for(int i = 1; i < 27; i++) {
             String first = encode(one, i);
             for (int j = 1; j < 27; j++) {
                 String second = encode(two, j);
