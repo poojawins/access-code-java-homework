@@ -29,7 +29,7 @@ public class CaesarCipher {
     }
 
     public static boolean codeBreaker(String one, String two) {
-        for (int i = 1; i < 26; i++) {
+        for (int i = 0; i < 26; i++) {
             if (one.equals(encode(two, i))) {
                 return true;
             }
@@ -48,6 +48,7 @@ public class CaesarCipher {
         String decoded = CaesarCipher.decode(encoded, 25);
         System.out.println(decoded);
 
+        System.out.println(codeBreaker(encode("OMG", 7), encode("OMG", 7))); //true
         System.out.println(codeBreaker(encode("OMG", 7), encode("OMG", 17))); //true
         System.out.println(codeBreaker(encode("OMG", 7), encode("PIG", 17))); //false
     }
